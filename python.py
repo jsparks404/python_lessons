@@ -38,3 +38,15 @@ print('I\'m Josh and ' + phrase)
 
             # Working with Numbers
 
+my_num = 7
+# print(str(my_num) + ' is my favorite number')
+
+        # abs(number) = absolute value of a number
+        # pow(3, 2) = 3 ^ 2 = 9
+        # max(4, 6) = 6, gives larger number
+        # min(4, 6) = 4
+        # round(3.2) = 3
+         #  from math import * = imports a whole bunch of math functions
+        # floor(3.7) = 3
+        # ceil(3.7) = 4
+        # sqrt(36) = 6
