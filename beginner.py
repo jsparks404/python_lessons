@@ -117,3 +117,47 @@ def fizzbuzz(num):
             print(i)
 
 # fizzbuzz(50)
+
+
+        # Password Generator
+
+import random
+letters = ['a', 'b', 'c', 'd', 'e']
+numbers = ['1', '2', '3', '4', '5']
+symbols = ['!', '@', '#', '$', '%']
+
+nr_letters = int(input('How many letters?  '))
+nr_numbers = int(input('How many Numbers?  '))
+nr_symbols = int(input('How many symbols?  '))
+
+
+# password = ""
+
+# for char in range(1, nr_letters + 1):
+#     password += random.choice(letters)
+
+# for char in range(1, nr_numbers + 1):
+#     password += random.choice(numbers)
+
+# for char in range(1, nr_symbols + 1):
+#     password += random.choice(symbols)
+
+# print(password)
+
+
+
+
+password = []
+
+for char in range(1, nr_letters + 1):
+    password.append(random.choice(letters))
+
+for char in range(1, nr_numbers + 1):
+    password.append(random.choice(numbers))
+
+for char in range(1, nr_symbols + 1):
+    password.append(random.choice(symbols))
+
+print(password)
+random.shuffle(password)
+print(''.join(password))
