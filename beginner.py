@@ -86,4 +86,34 @@ def max_score(scores):
             max = i 
     return max
 
-print(max_score(scores))
+# print(max_score(scores))
+
+        # range
+ 
+# for i in range(a, b, c)    a = starting number, b = stopping number not including that number, c = step size
+
+
+        # adding evens
+
+def adding_evens(num):
+    sum = 0
+    for i in range(2, num + 1, 2):
+        sum += i 
+    return sum
+
+
+# print(adding_evens(100))
+
+
+def fizzbuzz(num):
+    for i in range(1, num + 1):
+        if i % 15 == 0:
+            print('fizzbuzz')
+        elif i % 5 == 0:
+            print('buzz')
+        elif i % 3 == 0:
+            print('fizz')
+        else:
+            print(i)
+
+# fizzbuzz(50)
