@@ -70,3 +70,20 @@ def avg_height(heights):
     return round(sum / len(heights))
 
 # print(avg_height(student_heights))
+
+
+        # max score
+
+scores = [78, 65, 89, 86, 55, 91, 64, 89]
+
+max(scores) # --> 91
+min(scores) # --> 55
+
+def max_score(scores):
+    max = scores[0]
+    for i in scores:
+        if i > max:
+            max = i 
+    return max
+
+print(max_score(scores))
