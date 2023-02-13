@@ -53,4 +53,20 @@
 
 
 
-         #
+            # Loops 
+
+fruits = ['apple', 'pear', 'banana']
+# for fruit in fruits:
+#     print(fruit)            # -> 'apple' 'pear' 'banana'
+
+
+        # avg height
+
+student_heights = [180, 124, 165, 173, 189, 169, 146]
+def avg_height(heights):
+    sum = 0
+    for i in heights:
+        sum += i
+    return round(sum / len(heights))
+
+# print(avg_height(student_heights))
