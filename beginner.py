@@ -158,6 +158,10 @@ for char in range(1, nr_numbers + 1):
 for char in range(1, nr_symbols + 1):
     password.append(random.choice(symbols))
 
-print(password)
-random.shuffle(password)
-print(''.join(password))
+# print(password)
+# random.shuffle(password)
+# print(''.join(password))
+
+
+
+            # WHile loops
