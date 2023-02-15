@@ -164,4 +164,17 @@ for char in range(1, nr_symbols + 1):
 
 
 
-            # WHile loops
+            # While loops
+
+# while something is true: do something
+
+# goal is placed after 6 hurdles
+number_of_hurdles = 6
+while number_of_hurdles > 0:
+    jump()
+    number_of_hurdles -= 1
+    print(number_of_hurdles)
+
+# goal is placed after a random hurdle
+while not at_goal:
+    jump()
