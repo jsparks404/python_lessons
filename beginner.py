@@ -186,10 +186,12 @@ def turn_right():
     turn_left()
     turn_left()
 
+# edge case to avoid infinite loop
 while front_is_clear():
     move()
 turn_left()
 
+# moving through maze
 while not at_goal():
     if right_is_clear():
         turn_right()
