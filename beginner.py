@@ -211,12 +211,38 @@ number_of_hurdles = 6
 word_list = ['aardvark', 'baboon', 'camel']
 
 chosen_word = random.choice(word_list)   #chooses random word from word list
+print(f'The chosen word is {chosen_word}')
 
-guess = input('Guess a letter: ').lower() # takes user input and makes it lowercase
+display = []
+for letter in chosen_word:
+    display.append('_')
+print(display)
 
-for letter in chosen_word:   # sees if letter at index matches guess
-    if letter == guess:
-        print('Right')
-    else:
-        print('wrong')
+# guess = input('Guess a letter: ').lower() # takes user input and makes it lowercase
 
+
+
+# for position in range(len(chosen_word)):   # sees if letter at index matches guess
+#     letter = chosen_word[position]
+#     if letter == guess:
+#         display[position] = letter
+
+# print(display)
+end_of_game = False
+lives = 6
+while not end_of_game:
+    guess = input('Guess a letter: ').lower()
+    for position in range(len(chosen_word)):
+        letter = chosen_word[position]
+        if letter == guess:
+            display[position] = letter
+    if guess not in chosen_word:
+        lives -= 1
+        print(lives)
+        if lives == 0:
+            end_of_game = True
+            print('Loser')
+    if '_' not in display:
+        end_of_game = True
+        print('Winner')
+    print(display)
