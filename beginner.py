@@ -46,7 +46,7 @@
 
             # Randomisation      must import random module
 
-# import random  # can import other files and use variables and or functions in those files
+import random  # can import other files and use variables and or functions in those files
 # random_integer = random.randint(1, 10) # gives you random integer between 1 and 10 including those numbers
 # random_float = random.random()
 # print(random_float)
@@ -126,9 +126,9 @@ letters = ['a', 'b', 'c', 'd', 'e']
 numbers = ['1', '2', '3', '4', '5']
 symbols = ['!', '@', '#', '$', '%']
 
-nr_letters = int(input('How many letters?  '))
-nr_numbers = int(input('How many Numbers?  '))
-nr_symbols = int(input('How many symbols?  '))
+# nr_letters = int(input('How many letters?  '))
+# nr_numbers = int(input('How many Numbers?  '))
+# nr_symbols = int(input('How many symbols?  '))
 
 
 # password = ""
@@ -149,14 +149,14 @@ nr_symbols = int(input('How many symbols?  '))
 
 password = []
 
-for char in range(1, nr_letters + 1):
-    password.append(random.choice(letters))
+# for char in range(1, nr_letters + 1):
+#     password.append(random.choice(letters))
 
-for char in range(1, nr_numbers + 1):
-    password.append(random.choice(numbers))
+# for char in range(1, nr_numbers + 1):
+#     password.append(random.choice(numbers))
 
-for char in range(1, nr_symbols + 1):
-    password.append(random.choice(symbols))
+# for char in range(1, nr_symbols + 1):
+#     password.append(random.choice(symbols))
 
 # print(password)
 # random.shuffle(password)
@@ -170,33 +170,53 @@ for char in range(1, nr_symbols + 1):
 
 # goal is placed after 6 hurdles
 number_of_hurdles = 6
-while number_of_hurdles > 0:
-    jump()
-    number_of_hurdles -= 1
-    print(number_of_hurdles)
+# while number_of_hurdles > 0:
+#     jump()
+#     number_of_hurdles -= 1
+#     print(number_of_hurdles)
 
-# goal is placed after a random hurdle
-while not at_goal:
-    jump()
+# # goal is placed after a random hurdle
+# while not at_goal:
+#     jump()
 
 
-    #Maze
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
+#     #Maze
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
 
-# edge case to avoid infinite loop
-while front_is_clear():
-    move()
-turn_left()
+# # edge case to avoid infinite loop
+# while front_is_clear():
+#     move()
+# turn_left()
 
-# moving through maze
-while not at_goal():
-    if right_is_clear():
-        turn_right()
-        move()
-    elif front_is_clear():
-        move()
+# # moving through maze
+# while not at_goal():
+#     if right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():
+#         move()
+#     else:
+#         turn_left()
+
+
+
+
+
+
+        # Hangman
+
+word_list = ['aardvark', 'baboon', 'camel']
+
+chosen_word = random.choice(word_list)   #chooses random word from word list
+
+guess = input('Guess a letter: ').lower() # takes user input and makes it lowercase
+
+for letter in chosen_word:   # sees if letter at index matches guess
+    if letter == guess:
+        print('Right')
     else:
-        turn_left()
+        print('wrong')
+
