@@ -311,10 +311,10 @@ shift = int(input("Type the shift number:\n"))
 
 def caesar(text, shift, direction):
     end_text = ''
+    if direction == 'decode':
+            shift *= -1
     for letter in text:
         position = alphabet.index(letter)
-        if direction == 'decode':
-            shift *= -1
         new_position = position + shift
         new_letter = alphabet[new_position]
         end_text += new_letter
