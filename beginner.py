@@ -270,14 +270,46 @@ import math
 
 
 
-def prime_number(num):
-    for i in range(2, math.ceil(num / 2)):
-        if num % i == 0:
-            return f"{num} is not a prime number"
-    else:
-        return f"{num} is a prime number"
+# def prime_number(num):
+#     for i in range(2, math.ceil(num / 2)):
+#         if num % i == 0:
+#             return f"{num} is not a prime number"
+#     else:
+#         return f"{num} is a prime number"
 
 
 
-num = int(input("Check this number: "))
-print(prime_number(num))
+# num = int(input("Check this number: "))
+# print(prime_number(num))
+
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message here:\n")
+shift = int(input("Type the shift number:\n"))
+
+def encrypt(text, shift):
+    cipher_text = ""
+    for letter in text:
+        position = alphabet.index(letter)
+        new_position = position + shift
+        new_letter = alphabet[new_position]
+        cipher_text += new_letter
+    print(f"the encoded text is {cipher_text}")
+    
+
+def decrypt(cipher_text, shift):
+    original_text = ''
+    for letter in cipher_text:
+        position = alphabet.index(letter)
+        new_position = position - shift
+        new_letter = alphabet[new_position]
+        original_text += new_letter
+    print(f"the decoded text is {original_text}")
+
+if direction == 'encode':
+    encrype(text, shift)
+elif direction == 'decode':
+    decrypt(text, shift)
+
+
