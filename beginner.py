@@ -253,13 +253,31 @@ number_of_hurdles = 6
         # Paint calculator
 import math
 
-def paint_calc(height, width, cover):
-    area = height * width
-    num_cans = math.ceil(area / cover)
-    print(f"You'll need {num_cans} cans of paint")
+# def paint_calc(height, width, cover):
+#     area = height * width
+#     num_cans = math.ceil(area / cover)
+#     print(f"You'll need {num_cans} cans of paint")
 
 
-test_h = int(input("Height of wall: "))
-test_w = int(input("Width of wall: "))
-coverage = 5
-paint_calc(height = test_h, width = test_w, cover = coverage)
+# test_h = int(input("Height of wall: "))
+# test_w = int(input("Width of wall: "))
+# coverage = 5
+# paint_calc(height = test_h, width = test_w, cover = coverage)
+
+
+
+        # Prim number checker
+
+
+
+def prime_number(num):
+    for i in range(2, math.ceil(num / 2)):
+        if num % i == 0:
+            return f"{num} is not a prime number"
+    else:
+        return f"{num} is a prime number"
+
+
+
+num = int(input("Check this number: "))
+print(prime_number(num))
