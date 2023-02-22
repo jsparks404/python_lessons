@@ -420,31 +420,61 @@ def add_new_country(country_visited, times_visited, cities_visited):
     new_country["cities_visited"] = cities_visited
     travel_log2.append(new_country)
 
-add_new_country("Russia", 1, ["Moscow", "Sochi"])
+# add_new_country("Russia", 1, ["Moscow", "Sochi"])
 
 # print(travel_log2)
 
 
 
         # Blind Auction
-bids = {}
-bidding_finished = False
-def highest_bidder(bidding_record):
-    highest_bid = 0
-    winner = ""
-    for bidder in bidding_record:
-       bid_amount = bidding_record[bidder]
-       if bid_amount > highest_bid:
-           highest_bid = bid_amount
-           winner = bidder
-    print(f"The winner is {winner} with the bid of ${highest_bid}")
+# bids = {}
+# bidding_finished = False
+# def highest_bidder(bidding_record):
+#     highest_bid = 0
+#     winner = ""
+#     for bidder in bidding_record:
+#        bid_amount = bidding_record[bidder]
+#        if bid_amount > highest_bid:
+#            highest_bid = bid_amount
+#            winner = bidder
+#     print(f"The winner is {winner} with the bid of ${highest_bid}")
 
-while not bidding_finished:
-    name = input("What is your name: ")
-    price = int(input("What is your bid: $"))
-    bids[name] = price
-    should_continue = input("Any other bidders? 'Yes' or 'no': ")
-    if should_continue == "no":
-        bidding_finished = True
-        highest_bidder(bids)
+# while not bidding_finished:
+#     name = input("What is your name: ")
+#     price = int(input("What is your bid: $"))
+#     bids[name] = price
+#     should_continue = input("Any other bidders? 'Yes' or 'no': ")
+#     if should_continue == "no":
+#         bidding_finished = True
+#         highest_bidder(bids)
     
+
+
+
+
+
+
+            # functions with outputs
+
+# .title() returns string in title case -->  josh sparks = Josh Sparks
+
+
+
+# def format_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"{formated_f_name} {formated_l_name}"
+
+# print(format_name("josh", "sparks"))
+
+        # multiple return values      can do with conditionals
+    # docstrings --> strings to document   """ """  populates documentation when function is called.
+
+
+def format_name(f_name, l_name):
+    """Take a first and last name and format it to return the title case version of the name."""
+    if f_name == "" or l_name == "":
+        return "You didn't provide valid inputs."
+    formated_f_name = f_name.title()
+    formated_l_name = l_name.title()
+    return f"{formated_f_name} {formated_l_name}"
