@@ -283,11 +283,11 @@ import math
 # print(prime_number(num))
 
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message here:\n")
-shift = int(input("Type the shift number:\n"))
-shift = shift % 26
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message here:\n")
+# shift = int(input("Type the shift number:\n"))
+# shift = shift % 26
 # def encrypt(text, shift):
 #     cipher_text = ""
 #     for letter in text:
@@ -321,4 +321,39 @@ def caesar(text, shift, direction):
     print(f"The {direction}d text is {end_text}")
 
 
-caesar(text, shift, direction)
+# caesar(text, shift, direction)
+
+
+
+
+
+            # Dictionaries
+        # Objects
+
+pro_dictionary = {
+    "Bug": "An error in a program that prevents the program from running as expected.",
+    "Function": "A piece of code that you can easily call over and over again.",
+    
+}
+
+    # accessing values like lists using bracket notation
+
+# print(pro_dictionary["Bug"])
+
+    # adding to dictionary
+pro_dictionary["Loop"] = "The act of doing something over and over again."
+# print(pro_dictionary)
+
+empty_dict = {}   # can be added to later
+
+    # Wipe existing dict by setting dictionary equal to {}
+# pro_dictionary = {}
+
+    # Edit item by setting key equal to different value
+# pro_dictionary["Bug"] = "An insect in your computer"
+
+
+    # Looping through dictionary
+for key in pro_dictionary:
+    print(key)    #just prints keys
+    print(pro_dictionary[key])   # prints key then value
