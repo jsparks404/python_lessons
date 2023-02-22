@@ -354,6 +354,34 @@ empty_dict = {}   # can be added to later
 
 
     # Looping through dictionary
-for key in pro_dictionary:
-    print(key)    #just prints keys
-    print(pro_dictionary[key])   # prints key then value
+# for key in pro_dictionary:
+#     print(key)    #just prints keys
+#     print(pro_dictionary[key])   # prints key then value
+
+
+
+
+
+scores = {
+    "Harry": 81,
+    "Ron": 78, 
+    "Hermione": 99, 
+    "Draco": 74,
+    "Neville": 62,
+}
+
+
+grades = {}
+
+for student in scores:
+    score = scores[student]
+    if score > 90:
+        grades[student] = "Outstanding"
+    elif score > 80:
+        grades[student] = "Exceeds Expectations"
+    elif score > 70:
+        grades[student] = "Acceptable"
+    else:
+        grades[student] = "Fail"
+
+# print(grades)
