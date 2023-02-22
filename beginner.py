@@ -413,3 +413,13 @@ travel_log2 = [
     }
 ]
 
+def add_new_country(country_visited, times_visited, cities_visited):
+    new_country = {}
+    new_country["country"] = country_visited
+    new_country["total_vistits"] = times_visited
+    new_country["cities_visited"] = cities_visited
+    travel_log2.append(new_country)
+
+add_new_country("Russia", 1, ["Moscow", "Sochi"])
+
+print(travel_log2)
