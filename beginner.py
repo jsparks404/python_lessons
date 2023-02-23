@@ -565,32 +565,40 @@ def compare(user_score, computer_score):
     else:
         return "Loser"
 
-user_cards = []
-computer_cards = []
-game_over = False
+def play_game():
+    user_cards = []
+    computer_cards = []
+    game_over = False
 
-for _ in range(2):
-   user_cards.append(deal_card())
-   computer_cards.append(deal_card())
+    for _ in range(2):
+        user_cards.append(deal_card())
+        computer_cards.append(deal_card())
 
-while not game_over:
-    user_score = calculate_score(user_cards)
-    computer_score = calculate_score(computer_cards)
-    print(user_cards, user_score)
-    print(computer_cards[0])
+    while not game_over:
+        user_score = calculate_score(user_cards)
+        computer_score = calculate_score(computer_cards)
+        print(user_cards, user_score)
+        print(computer_cards[0])
 
-    if user_score == 0 or computer_score == 0 or user_score > 21:
-        game_over = True
-    else:
-        hit_or_stay = input("Type 'y' to hit and 'n' to stay: ")
-        if hit_or_stay == "y":
-            user_cards.append(deal_card())
-        else:
+        if user_score == 0 or computer_score == 0 or user_score > 21:
             game_over = True
+        else:
+            hit_or_stay = input("Type 'y' to hit and 'n' to stay: ")
+            if hit_or_stay == "y":
+                user_cards.append(deal_card())
+            else:
+                game_over = True
 
-while computer_score != 0 and computer_score < 17:
-    computer_cards.append(deal_card())
-    computer_score = calculate_score(computer_cards)
+    while computer_score != 0 and computer_score < 17:
+        computer_cards.append(deal_card())
+        computer_score = calculate_score(computer_cards)
 
-print(user_score, computer_score)
-print(compare(user_score, computer_score))
+    print(user_score, computer_score)
+    print(compare(user_score, computer_score))
+
+    while input("Do you want to play again? 'y' or 'n': ") == 'y':
+        play_game()
+
+
+
+# play_game()
