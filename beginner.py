@@ -622,9 +622,46 @@ enemies = 1                 #globally scoped here
 #     enemies += 1
 
 
-def increase_enemies():
-    return enemeies += 1            # can instead return globally scoped variable change
+# def increase_enemies():
+#     return enemeies += 1            # can instead return globally scoped variable change
 
 
 
 PI = 3.14159265         # Global constant convention should be all capitalized
+
+
+            # number guessing game high low
+
+
+def game():
+    number = random.randint(1, 100)
+    attempts = 0
+    in_play = True
+
+    print("Welcome to the number guessing game!")
+    print("I'm thinking of a number between 1 and 100")
+    difficulty = input("Choose a difficulty. Type 'easy' or 'hard': ")
+
+    if difficulty == 'easy':
+        attempts = 10
+    else:
+        attempts = 5
+
+    while in_play:
+        print(f"You have {attempts} attempts to guess the correct number")
+        guess = int(input("Guess a number: "))
+        if guess == number:
+            print("You guessed the correct number!")
+            in_play = False
+        elif guess > number:
+            print("Too high. Guess again")
+            attempts -= 1
+        elif guess < number:
+            print("Too low. Guess again")
+            attempts -= 1
+        if attempts == 0:
+            print("You ran out of attempts")
+            in_play = False
+
+
+game()
