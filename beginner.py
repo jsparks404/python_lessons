@@ -624,3 +624,7 @@ enemies = 1                 #globally scoped here
 
 def increase_enemies():
     return enemeies += 1            # can instead return globally scoped variable change
+
+
+
+PI = 3.14159265         # Global constant convention should be all capitalized
