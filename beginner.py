@@ -602,3 +602,25 @@ def play_game():
 
 
 # play_game()
+
+
+
+
+            # Scope
+
+# no such thing as block scope in python
+
+        # modifying global variable, don't do often, prone to bugs
+
+enemies = 1                 #globally scoped here
+
+# def increase_enemies():
+#     enemies = 2             #locally scoped here
+
+# def increase_enemies():
+#     global enemies              # global key word accesses globally scoped variable
+#     enemies += 1
+
+
+def increase_enemies():
+    return enemeies += 1            # can instead return globally scoped variable change
