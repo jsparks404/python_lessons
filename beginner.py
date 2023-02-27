@@ -678,3 +678,10 @@ def game():
 # Use print() to find problems
 # Use debugger
 # Take a break
+# Ask for help
+# Run code often
+# Google
+
+
+
+
