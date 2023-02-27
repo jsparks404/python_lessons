@@ -664,4 +664,17 @@ def game():
             in_play = False
 
 
-game()
+# game()
+
+
+
+
+            # Debugging
+
+# Describe the problem
+# Reproduce the bug
+# Evaluate each line
+# Read errors, watch for red underlines
+# Use print() to find problems
+# Use debugger
+# Take a break
