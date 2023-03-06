@@ -129,18 +129,37 @@ menu = Menu()
 
 is_on = True
 
-money_machine.report()
-coffee_maker.report()
+# money_machine.report()
+# coffee_maker.report()
 
-while is_on:
-    options = menu.get_items()
-    choice = input(f"What would you like? ({options})")
-    if choice == "off":
-        is_on = False
-    elif choice == "report":
-        coffee_maker.report()
-        money_machine.report()
-    else:
-        drink = menu.find_drink(choice)
-        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
-            coffee_maker.make_coffee(drink)
+# while is_on:
+#     options = menu.get_items()
+#     choice = input(f"What would you like? ({options})")
+#     if choice == "off":
+#         is_on = False
+#     elif choice == "report":
+#         coffee_maker.report()
+#         money_machine.report()
+#     else:
+#         drink = menu.find_drink(choice)
+#         if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+#             coffee_maker.make_coffee(drink)
+
+
+
+
+
+                #Creating classes
+
+
+class User:
+    def __init__(self, id, username):
+        self.id = id
+        self.username = username
+
+
+user_1 = User("001", "Josh")
+# user_1.id = "001"
+# user_1.usermname = "josh"
+
+print(user_1.id)
