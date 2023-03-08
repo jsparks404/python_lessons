@@ -249,3 +249,16 @@ while quiz.still_has_questions():
 
 print("You've completed the quiz!")
 print(f"Your final score is {quiz.score}/{len(quiz.question_list)}")
+
+
+
+
+
+            # tuple   datatype  (1, 2, 3)
+        # like a list but with regular (), , ordered, immutable
+        
+
+
+my_tuple = (1, 4, 5)
+
+my_tuple[1] # -> 4
